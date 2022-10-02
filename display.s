@@ -331,15 +331,17 @@ prepare:
 	MOV R0, #0
 	MOV R7, #sys_map
 	SVC 0
+        MOV R7, #1
+        SVC 0
 	MOVS R8, R0
 
     pinDisplay
     displayClear
     functionSet
     functionSet
-	functionSet
-	display
-	entrySetMode
+    functionSet
+    display
+    entrySetMode
 
 write:
     writeNumber1
