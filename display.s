@@ -342,7 +342,8 @@ prepare:
     functionSet
     display
     entrySetMode
-
+    writeNumber1
+    writeNumber2
 write:
     writeNumber1
     writeNumber2
