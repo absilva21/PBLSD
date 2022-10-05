@@ -8,7 +8,7 @@
 .equ sys_map, 192	@ syscall para mapeamento de memória (gera endereço virtual)
 .equ nano_sleep, 162	@ syscall para realizar uma pausa na execução do programa
 .equ level, 52
-
+.global _start
 @ macro para pausar a execução do programa (em ms)
 .macro nanoSleep
         LDR R0,=timespecsec  @ carrega o valor da variável timespecsec
@@ -314,7 +314,7 @@
 .endm
 .text
 
-prepare:
+_start:
 	LDR R0, =fileName
 	MOV R1, #0x1b0
 	ORR R1, #0x006
